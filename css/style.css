@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-size: 18px;
+  outline: none;
   font-family: "Open Sans Condensed", sans-serif;
 }
 
@@ -30,7 +31,7 @@ nav {
 
 .logo {
   background-color: white;
-  width: 92px;
+  width: 100px;
   height: 120px;
   background-size: cover;
   padding: 0 5px;
@@ -39,9 +40,10 @@ nav {
 
 .logo img {
   position: absolute;
-  width: 80px;
+  width: 90px;
+  height: 115px;
   border: 1px solid #ccc;
-  padding: 5px;
+  padding: 10px;
 }
 
 .navigation {
@@ -101,7 +103,7 @@ nav {
   padding: 10px;
 }
 
-.right ul li:hover a,
+.right > ul li:hover a,
 .right ul li ul.internal-menu-container-right {
   background-color: #272727;
   color: white;
@@ -115,12 +117,29 @@ nav {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-.right input[type="search"] {
+/* <!--div search--> */
+.right .search label input[type="search"] {
+  display: none;
+  position: absolute;
+  margin: 7px -170px 0;
+  width: 350px;
+  border: 10px solid rgb(30, 30, 30);
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.right input[type="checkbox"] {
+  position: absolute;
+  z-index: 2;
   display: none;
 }
 
-/* <!--div search--> */
+.right input:checked ~ .search label input[type="search"] {
+  display: block;
+}
+
 .right .search {
+  position: relative;
   border-radius: 50%;
   width: 30px;
   height: 30px;
@@ -130,27 +149,29 @@ nav {
   align-items: center;
   padding: 5px;
   margin: 0 15px;
-  cursor: pointer;
 }
 
 .right .search .icon {
+  cursor: pointer;
   color: black;
 }
 
 /* <!--div buttons--> */
 .icon {
-  padding: 0px 5px;
+  padding: 5px;
   color: rgb(255, 255, 255);
   font-size: 0.8rem;
 }
 
-.right div {
+.right div.donate,
+.right div.adopt {
   padding: 8px 8px;
   border: none;
   border-radius: 2px;
 }
 
-.right div span {
+.right div.adopt span,
+.right div.donate span {
   font-size: 0.9rem;
   color: rgb(255, 255, 255);
   font-weight: 600;
@@ -160,13 +181,72 @@ nav {
 
 /* <!--div donate--> */
 .right div.donate {
-  background-color: rgba(255, 66, 66, 0.8);
+  background-color: rgb(226, 46, 46);
   margin-right: 10px;
+}
+
+.right div.donate ul.internal-menu-container-button-donate {
+  background-color: unset;
+  margin: 13px -140px;
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  max-width: 260px;
+  width: 100%;
+  padding: 5px 0 10px 0;
+}
+
+.right div.adopt ul.internal-menu-container-button-adopt {
+  background-color: unset;
+  margin: 40px -252px 0;
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  max-width: 260px;
+  width: 100%;
+  padding: 5px 0 10px 0;
+}
+
+.right div.donate ul.internal-menu-container-button-donate li,
+.right div.adopt ul.internal-menu-container-button-adopt li {
+  margin: unset;
+  display: flex;
+  padding: 5px 10px;
+}
+
+.right div.donate ul.internal-menu-container-button-donate li:hover,
+.right div.adopt ul.internal-menu-container-button-adopt li:hover {
+  background-color: unset;
+  outline-color: unset;
+}
+
+.right div.donate ul.internal-menu-container-button-donate li a,
+.right div.adopt ul.internal-menu-container-button-adopt li a {
+  padding: unset;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: white;
+  border-bottom: 1px solid transparent;
+}
+
+.right div.donate ul.internal-menu-container-button-donate li a:hover,
+.right div.adopt ul.internal-menu-container-button-adopt li a:hover {
+  border-bottom: 1px solid rgb(230, 228, 228);
+  color: rgb(230, 228, 228);
+  background-color: unset;
+}
+
+.right div.donate ul.internal-menu-container-button-donate {
+  background-color: rgb(226, 46, 46);
 }
 
 /* <!--div adopt--> */
 .right div.adopt {
-  background-color: rgb(216, 108, 8);
+  background-color: rgb(216, 84, 8);
+}
+
+.right div.adopt ul.internal-menu-container-button-adopt {
+  background-color: rgb(216, 84, 8);
 }
 
 /* <!--internal-menu-container-left--> */
@@ -179,6 +259,7 @@ nav {
   flex-wrap: wrap;
   max-width: 445px;
   margin-top: 10px;
+  box-shadow: 0 3px 5px -3px rgb(156, 156, 156);
 }
 
 .left ul li:hover ul.internal-menu-container-left {
@@ -255,4 +336,57 @@ nav {
   font-size: 1.1rem;
   font-weight: 600;
   color: #1da1f8;
+}
+
+/* <!--internal-menu-container-right--> */
+.right ul li ul.internal-menu-container-right {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  background-color: #272727;
+  width: 180px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.right ul li:hover ul.internal-menu-container-right {
+  display: flex;
+}
+
+.right ul li ul.internal-menu-container-right li {
+  padding: 5px 10px;
+  color: #9a9ea1;
+  display: flex;
+}
+
+.right ul li ul.internal-menu-container-right li a {
+  color: unset;
+  margin: 0;
+  padding: 2px 0;
+  font-size: 0.8rem;
+  font-weight: 400;
+  border-bottom: 1px solid transparent;
+}
+
+.right ul li ul.internal-menu-container-right li a:hover {
+  color: white;
+  background-color: unset;
+  border-bottom: 1px solid rgb(90, 89, 89);
+}
+
+/* .right ul li:hover a,
+.right ul li ul.internal-menu-container-right {
+} */
+
+.right div.donate:hover i.fas.fa-plus,
+.right
+  div.donate
+  i.fas.fa-plus:hover
+  + ul.internal-menu-container-button-donate {
+  display: inline-block;
+}
+
+.right div.adopt:hover i.fas.fa-plus,
+.right div.adopt i.fas.fa-plus:hover + ul.internal-menu-container-button-adopt {
+  display: inline-block;
 }
