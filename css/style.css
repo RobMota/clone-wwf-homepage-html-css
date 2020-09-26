@@ -78,7 +78,7 @@ nav {
   text-decoration: none;
 }
 
-/* <!--left--> */
+/* <!--header-left-side--> */
 .left ul li {
   margin-right: 15px;
   padding: 0 5px;
@@ -91,165 +91,7 @@ nav {
   padding: 10px;
 }
 
-/* <!--right--> */
-.right ul li {
-  margin-right: 5px;
-}
-
-.right ul li a {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: white;
-  padding: 10px;
-}
-
-.right > ul li:hover a,
-.right ul li ul.internal-menu-container-right {
-  background-color: #272727;
-  color: white;
-}
-
-.right ul li a {
-  color: #9a9ea1;
-  font-weight: 600;
-  font-size: 0.8rem;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
-
-/* <!--div search--> */
-.right .search label input[type="search"] {
-  display: none;
-  position: absolute;
-  margin: 7px -170px 0;
-  width: 350px;
-  border: 10px solid rgb(30, 30, 30);
-  padding: 8px;
-  border-radius: 5px;
-}
-
-.right input[type="checkbox"] {
-  position: absolute;
-  z-index: 2;
-  display: none;
-}
-
-.right input:checked ~ .search label input[type="search"] {
-  display: block;
-}
-
-.right .search {
-  position: relative;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5px;
-  margin: 0 15px;
-}
-
-.right .search .icon {
-  cursor: pointer;
-  color: black;
-}
-
-/* <!--div buttons--> */
-.icon {
-  padding: 5px;
-  color: rgb(255, 255, 255);
-  font-size: 0.8rem;
-}
-
-.right div.donate,
-.right div.adopt {
-  padding: 8px 8px;
-  border: none;
-  border-radius: 2px;
-}
-
-.right div.adopt span,
-.right div.donate span {
-  font-size: 0.9rem;
-  color: rgb(255, 255, 255);
-  font-weight: 600;
-  padding: 0 30px 0 5px;
-  border-right: 1px solid rgb(233, 232, 232);
-}
-
-/* <!--div donate--> */
-.right div.donate {
-  background-color: rgb(226, 46, 46);
-  margin-right: 10px;
-}
-
-.right div.donate ul.internal-menu-container-button-donate {
-  background-color: unset;
-  margin: 13px -140px;
-  display: none;
-  position: absolute;
-  flex-direction: column;
-  max-width: 260px;
-  width: 100%;
-  padding: 5px 0 10px 0;
-}
-
-.right div.adopt ul.internal-menu-container-button-adopt {
-  background-color: unset;
-  margin: 40px -252px 0;
-  display: none;
-  position: absolute;
-  flex-direction: column;
-  max-width: 260px;
-  width: 100%;
-  padding: 5px 0 10px 0;
-}
-
-.right div.donate ul.internal-menu-container-button-donate li,
-.right div.adopt ul.internal-menu-container-button-adopt li {
-  margin: unset;
-  display: flex;
-  padding: 5px 10px;
-}
-
-.right div.donate ul.internal-menu-container-button-donate li:hover,
-.right div.adopt ul.internal-menu-container-button-adopt li:hover {
-  background-color: unset;
-  outline-color: unset;
-}
-
-.right div.donate ul.internal-menu-container-button-donate li a,
-.right div.adopt ul.internal-menu-container-button-adopt li a {
-  padding: unset;
-  font-weight: 400;
-  font-size: 0.9rem;
-  color: white;
-  border-bottom: 1px solid transparent;
-}
-
-.right div.donate ul.internal-menu-container-button-donate li a:hover,
-.right div.adopt ul.internal-menu-container-button-adopt li a:hover {
-  border-bottom: 1px solid rgb(230, 228, 228);
-  color: rgb(230, 228, 228);
-  background-color: unset;
-}
-
-.right div.donate ul.internal-menu-container-button-donate {
-  background-color: rgb(226, 46, 46);
-}
-
-/* <!--div adopt--> */
-.right div.adopt {
-  background-color: rgb(216, 84, 8);
-}
-
-.right div.adopt ul.internal-menu-container-button-adopt {
-  background-color: rgb(216, 84, 8);
-}
-
-/* <!--internal-menu-container-left--> */
+/* <!--header-left-side-internal-menu-container-left--> */
 .left ul li ul.internal-menu-container-left {
   border-top: 1px solid rgb(247, 247, 247);
   z-index: 1;
@@ -293,7 +135,7 @@ nav {
   padding: 5px 15px;
 }
 
-/* <!--internal-menu-left--> */
+/* <!--header-left-side-internal-menu-left--> */
 .left ul li ul.internal-menu-container-left div.internal-menu-left li a {
   color: rgb(90, 89, 89);
 }
@@ -302,7 +144,7 @@ nav {
   color: #1da1f8;
 }
 
-/* <!--internal-menu-right--> */
+/* <!--header-left-side-internal-menu-right--> */
 .left ul li ul.internal-menu-container-left div.internal-menu-right {
   background-color: rgb(245, 245, 245);
   flex: 1 1 max-content;
@@ -321,7 +163,7 @@ nav {
   color: white;
 }
 
-/* <!--internal-menu-footer--> */
+/* <!--header-left-side-internal-menu-footer--> */
 .left ul li ul.internal-menu-container-left div.internal-menu-footer {
   border-top: 1px solid rgb(221, 219, 219);
   display: flex;
@@ -338,7 +180,29 @@ nav {
   color: #1da1f8;
 }
 
-/* <!--internal-menu-container-right--> */
+/* <!--header-right-side--> */
+.right ul li {
+  margin-right: 5px;
+}
+
+.right ul li a {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  padding: 10px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #9a9ea1;
+  font-size: 0.8rem;
+}
+
+.right > ul li:hover a,
+.right ul li ul.internal-menu-container-right {
+  background-color: #272727;
+  color: white;
+}
+
+/* <!--header-right-side-internal-menu-container-right--> */
 .right ul li ul.internal-menu-container-right {
   position: absolute;
   display: none;
@@ -374,19 +238,159 @@ nav {
   border-bottom: 1px solid rgb(90, 89, 89);
 }
 
-/* .right ul li:hover a,
-.right ul li ul.internal-menu-container-right {
-} */
-
-.right div.donate:hover i.fas.fa-plus,
-.right
-  div.donate
-  i.fas.fa-plus:hover
-  + ul.internal-menu-container-button-donate {
-  display: inline-block;
+/* <!--header-right-side-div-search--> */
+.right .search label input[type="search"] {
+  display: none;
+  position: absolute;
+  margin: 7px -170px 0;
+  width: 350px;
+  border: 10px solid #272727;
+  padding: 8px;
+  font-size: 0.8rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  border-radius: 5px;
 }
 
-.right div.adopt:hover i.fas.fa-plus,
-.right div.adopt i.fas.fa-plus:hover + ul.internal-menu-container-button-adopt {
-  display: inline-block;
+.right input[type="checkbox"] {
+  position: absolute;
+  z-index: 2;
+  display: none;
+}
+
+.right input:checked ~ .search label input[type="search"] {
+  display: block;
+}
+
+.right .search {
+  position: relative;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  margin: 0 15px;
+}
+
+.right .search .icon {
+  cursor: pointer;
+  color: black;
+}
+
+/* <!--header-right-side-div-buttons-donate-adopt--> */
+.icon {
+  padding: 12px 6px;
+  color: rgb(255, 255, 255);
+  font-size: 0.8rem;
+}
+
+.right div.donate,
+.right div.adopt {
+  /* padding: 8px 8px; */
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.right div.adopt span,
+.right div.donate span {
+  font-size: 0.9rem;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  padding: 0 15px 0;
+  border-right: 1px solid rgb(233, 232, 232);
+}
+
+.right div.adopt ul.internal-menu-container-button-adopt,
+.right div.donate ul.internal-menu-container-button-donate {
+  background-color: unset;
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  max-width: 260px;
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.right div.donate ul.internal-menu-container-button-donate li,
+.right div.adopt ul.internal-menu-container-button-adopt li {
+  margin: unset;
+  display: flex;
+  padding: 5px;
+}
+
+.right div.donate ul.internal-menu-container-button-donate li:hover,
+.right div.adopt ul.internal-menu-container-button-adopt li:hover {
+  background-color: unset;
+  outline-color: unset;
+}
+
+.right div.donate ul.internal-menu-container-button-donate li a,
+.right div.adopt ul.internal-menu-container-button-adopt li a {
+  padding: unset;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: white;
+  border-bottom: 1px solid transparent;
+}
+
+.right div.donate ul.internal-menu-container-button-donate li a:hover,
+.right div.adopt ul.internal-menu-container-button-adopt li a:hover {
+  border-bottom: 1px solid rgb(230, 228, 228);
+  color: rgb(230, 228, 228);
+  background-color: unset;
+}
+
+.right div.donate ul:before,
+.right div.adopt ul:before {
+  content: "";
+  position: absolute;
+  height: 20px;
+}
+
+/* <!--header-right-side-div-button-donate--> */
+.right div.donate {
+  background-color: rgb(226, 46, 46);
+  margin-right: 15px;
+}
+
+.right div.donate ul:before {
+  background-color: rgb(226, 46, 46);
+  margin: -18px 140px;
+  width: 110px;
+}
+
+.right div.donate ul.internal-menu-container-button-donate {
+  margin: 7px -150px;
+  background-color: rgb(226, 46, 46);
+}
+
+.right div.donate ul:hover,
+.right div.donate i:hover + ul {
+  display: block;
+}
+
+/* <!--header-right-side-div-button-adopt--> */
+.right div.adopt {
+  background-color: rgb(216, 84, 8);
+}
+
+.right div.adopt ul:before {
+  background-color: rgb(216, 84, 8);
+  margin: -20px 149px;
+  width: 101px;
+}
+
+.right div.adopt ul.internal-menu-container-button-adopt {
+  background-color: rgb(216, 84, 8);
+  margin: 7px -159px 0;
+}
+
+.right div.adopt ul:hover,
+.right div.adopt i:hover + ul {
+  display: block;
 }
