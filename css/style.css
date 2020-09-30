@@ -1,0 +1,418 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+  outline: none;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+body {
+  background-color: tomato;
+}
+
+header {
+  width: 100%;
+  background-color: #131313;
+}
+
+.center {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  display: flex;
+}
+
+nav {
+  padding: 0 20px;
+  width: 100%;
+  height: 70px;
+}
+
+.logo {
+  background-color: white;
+  width: 100px;
+  height: 120px;
+  background-size: cover;
+  padding: 0 5px;
+  position: absolute;
+}
+
+.logo img {
+  position: absolute;
+  width: 90px;
+  height: 115px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.navigation {
+  display: flex;
+  height: 100%;
+  margin-top: 5px;
+  padding: 5px 0;
+}
+
+.left,
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.left ul,
+.right ul {
+  list-style: none;
+  display: flex;
+}
+
+.left ul li a,
+.right ul li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  padding: 10px;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+.left ul li:hover a {
+  color: #1da1f8;
+  background-color: white;
+}
+
+
+/* <!--header-left-side--> */
+.left ul li {
+  margin-right: 15px;
+  padding: 0 5px;
+}
+
+/* <!--header-left-side-internal-menu-container-left--> */
+.left ul li ul.internal-menu-container-left {
+  border-top: 1px solid rgb(247, 247, 247);
+  z-index: 1;
+  background-color: white;
+  position: absolute;
+  flex-wrap: wrap;
+  max-width: 445px;
+  margin-top: 10px;
+  box-shadow: 0 3px 5px -3px rgb(156, 156, 156);
+
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 600ms, visibility 600ms;
+  transition: opacity 600ms, visibility 600ms;
+}
+
+.left ul li:hover ul.internal-menu-container-left {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+}
+
+  .left ul li ul.internal-menu-container-left a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: unset;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+  "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.left ul li ul.internal-menu-container-left li {
+  margin: unset;
+}
+
+.left ul li ul.internal-menu-container-left div.internal-menu-right,
+.left ul li ul.internal-menu-container-left div.internal-menu-left {
+  padding: 10px 0 20px;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.left ul li ul.internal-menu-container-left div.internal-menu-right li,
+.left ul li ul.internal-menu-container-left div.internal-menu-left li {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 15px;
+}
+
+/* <!--header-left-side-internal-menu-left--> */
+.left ul li ul.internal-menu-container-left div.internal-menu-left li a {
+  color: rgb(90, 89, 89);
+}
+
+.left ul li ul.internal-menu-container-left div.internal-menu-left li a:hover {
+  color: #1da1f8;
+}
+
+/* <!--header-left-side-internal-menu-right--> */
+.left ul li ul.internal-menu-container-left div.internal-menu-right {
+  background-color: rgb(245, 245, 245);
+  flex: 1 1 max-content;
+}
+
+.left ul li ul.internal-menu-container-left div.internal-menu-right li:hover {
+  background-color: #1da1f8;
+}
+
+.left ul li ul.internal-menu-container-left div.internal-menu-right li a {
+  background-color: unset;
+  color: #1da1f8;
+}
+
+.left ul li ul.internal-menu-container-left div.internal-menu-right li a:hover {
+  color: white;
+}
+
+/* <!--header-left-side-internal-menu-footer--> */
+.left ul li ul.internal-menu-container-left div.internal-menu-footer {
+  border-top: 1px solid rgb(221, 219, 219);
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.left ul li ul.internal-menu-container-left div.internal-menu-footer a span {
+  padding: 10px 15px;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1da1f8;
+}
+
+/* <!--header-right-side--> */
+.right ul li {
+  margin-right: 5px;
+}
+
+.right ul li a {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+  "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #9a9ea1;
+  font-size: 0.8rem;
+}
+
+.right > ul li:hover a,
+.right ul li ul.internal-menu-container-right {
+  background-color: #272727;
+  color: white;
+}
+
+/* <!--header-right-side-internal-menu-container-right--> */
+.right ul li ul.internal-menu-container-right {
+  position: absolute;
+  flex-direction: column;
+  background-color: #272727;
+  width: 180px;
+  margin-top: 10px;
+  padding: 10px;
+
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 600ms, visibility 600ms;
+  transition: opacity 600ms, visibility 600ms;
+}
+
+.right ul li:hover ul.internal-menu-container-right {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+}
+
+.right ul li ul.internal-menu-container-right li {
+  padding: 5px 10px;
+  color: #9a9ea1;
+  display: flex;
+}
+
+.right ul li ul.internal-menu-container-right li a {
+  color: unset;
+  margin: 0;
+  padding: 2px 0;
+  font-size: 0.8rem;
+  font-weight: 400;
+  border-bottom: 1px solid transparent;
+}
+
+.right ul li ul.internal-menu-container-right li a:hover {
+  color: white;
+  background-color: unset;
+  border-bottom: 1px solid rgb(90, 89, 89);
+}
+
+/* <!--header-right-side-div-search--> */
+.right .search label input[type="search"] {
+  display: none;
+  position: absolute;
+  margin: 7px -170px 0;
+  width: 350px;
+  border: 10px solid #272727;
+  padding: 8px;
+  font-size: 0.8rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  border-radius: 5px;
+}
+
+.right input[type="checkbox"] {
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 600ms, visibility 600ms;
+  transition: opacity 600ms, visibility 600ms;
+}
+
+.right input:checked ~ .search label input[type="search"] {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+}
+
+.right .search {
+  position: relative;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  margin: 0 15px;
+}
+
+.right .search .icon {
+  cursor: pointer;
+  color: black;
+}
+
+/* <!--header-right-side-div-buttons-donate-adopt--> */
+.icon {
+  padding: 12px 6px;
+  color: rgb(255, 255, 255);
+  font-size: 0.8rem;
+}
+
+.right div.donate,
+.right div.adopt {
+  /* padding: 8px 8px; */
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.right div.adopt span,
+.right div.donate span {
+  font-size: 0.9rem;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  padding: 0 15px 0;
+  border-right: 1px solid rgb(233, 232, 232);
+}
+
+.right div.adopt ul.internal-menu-container-button-adopt,
+.right div.donate ul.internal-menu-container-button-donate {
+  background-color: unset;
+  position: absolute;
+  flex-direction: column;
+  max-width: 260px;
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+
+   
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 600ms, visibility 600ms;
+  transition: opacity 600ms, visibility 600ms;
+}
+
+.right div.donate ul.internal-menu-container-button-donate li,
+.right div.adopt ul.internal-menu-container-button-adopt li {
+  margin: unset;
+  display: flex;
+  padding: 5px;
+}
+
+.right div.donate ul.internal-menu-container-button-donate li:hover,
+.right div.adopt ul.internal-menu-container-button-adopt li:hover {
+  background-color: unset;
+  outline-color: unset;
+}
+
+.right div.donate ul.internal-menu-container-button-donate li a,
+.right div.adopt ul.internal-menu-container-button-adopt li a {
+  padding: unset;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: white;
+  border-bottom: 1px solid transparent;
+}
+
+.right div.donate ul.internal-menu-container-button-donate li a:hover,
+.right div.adopt ul.internal-menu-container-button-adopt li a:hover {
+  border-bottom: 1px solid rgb(230, 228, 228);
+  color: rgb(230, 228, 228);
+  background-color: unset;
+}
+
+.right div.donate ul:before,
+.right div.adopt ul:before {
+  content: "";
+  position: absolute;
+  height: 20px;
+}
+
+/* <!--header-right-side-div-button-donate--> */
+.right div.donate {
+  background-color: rgb(226, 46, 46);
+  margin-right: 15px;
+}
+
+.right div.donate ul:before {
+  background-color: rgb(226, 46, 46);
+  margin: -18px 140px;
+  width: 110px;
+}
+
+.right div.donate ul.internal-menu-container-button-donate {
+  margin: 7px -150px;
+  background-color: rgb(226, 46, 46);
+ 
+}
+
+.right div.donate ul:hover,
+.right div.donate i:hover + ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* <!--header-right-side-div-button-adopt--> */
+.right div.adopt {
+  background-color: rgb(216, 84, 8);
+}
+
+.right div.adopt ul:before {
+  background-color: rgb(216, 84, 8);
+  margin: -20px 149px;
+  width: 101px;
+}
+
+.right div.adopt ul.internal-menu-container-button-adopt {
+  background-color: rgb(216, 84, 8);
+  margin: 7px -159px 0;
+}
+
+.right div.adopt ul:hover,
+.right div.adopt i:hover + ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
