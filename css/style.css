@@ -67,16 +67,22 @@ nav {
   display: flex;
 }
 
-.left ul li:hover a,
-.left ul li ul.internal-menu-container-left {
+.left ul li a,
+.right ul li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  padding: 10px;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+.left ul li:hover a {
   color: #1da1f8;
   background-color: white;
 }
 
-.left ul li a,
-.right ul li a {
-  text-decoration: none;
-}
 
 /* <!--header-left-side--> */
 .left ul li {
@@ -84,36 +90,35 @@ nav {
   padding: 0 5px;
 }
 
-.left ul li a {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: white;
-  padding: 10px;
-}
-
 /* <!--header-left-side-internal-menu-container-left--> */
 .left ul li ul.internal-menu-container-left {
   border-top: 1px solid rgb(247, 247, 247);
   z-index: 1;
-  display: none;
   background-color: white;
   position: absolute;
   flex-wrap: wrap;
   max-width: 445px;
   margin-top: 10px;
   box-shadow: 0 3px 5px -3px rgb(156, 156, 156);
+
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 600ms, visibility 600ms;
+  transition: opacity 600ms, visibility 600ms;
 }
 
 .left ul li:hover ul.internal-menu-container-left {
   display: flex;
+  opacity: 1;
+  visibility: visible;
 }
 
-.left ul li ul.internal-menu-container-left a {
+  .left ul li ul.internal-menu-container-left a {
   font-size: 0.9rem;
   font-weight: 500;
   padding: unset;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .left ul li ul.internal-menu-container-left li {
@@ -186,12 +191,8 @@ nav {
 }
 
 .right ul li a {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: white;
-  padding: 10px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: #9a9ea1;
   font-size: 0.8rem;
 }
@@ -205,16 +206,22 @@ nav {
 /* <!--header-right-side-internal-menu-container-right--> */
 .right ul li ul.internal-menu-container-right {
   position: absolute;
-  display: none;
   flex-direction: column;
   background-color: #272727;
   width: 180px;
   margin-top: 10px;
   padding: 10px;
+
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 600ms, visibility 600ms;
+  transition: opacity 600ms, visibility 600ms;
 }
 
 .right ul li:hover ul.internal-menu-container-right {
   display: flex;
+  opacity: 1;
+  visibility: visible;
 }
 
 .right ul li ul.internal-menu-container-right li {
@@ -255,11 +262,16 @@ nav {
 .right input[type="checkbox"] {
   position: absolute;
   z-index: 2;
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 600ms, visibility 600ms;
+  transition: opacity 600ms, visibility 600ms;
 }
 
 .right input:checked ~ .search label input[type="search"] {
-  display: block;
+  display: flex;
+  opacity: 1;
+  visibility: visible;
 }
 
 .right .search {
@@ -307,13 +319,18 @@ nav {
 .right div.adopt ul.internal-menu-container-button-adopt,
 .right div.donate ul.internal-menu-container-button-donate {
   background-color: unset;
-  display: none;
   position: absolute;
   flex-direction: column;
   max-width: 260px;
   width: 100%;
   padding: 10px;
   cursor: pointer;
+
+   
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 600ms, visibility 600ms;
+  transition: opacity 600ms, visibility 600ms;
 }
 
 .right div.donate ul.internal-menu-container-button-donate li,
@@ -367,11 +384,14 @@ nav {
 .right div.donate ul.internal-menu-container-button-donate {
   margin: 7px -150px;
   background-color: rgb(226, 46, 46);
+ 
 }
 
 .right div.donate ul:hover,
 .right div.donate i:hover + ul {
   display: block;
+  opacity: 1;
+  visibility: visible;
 }
 
 /* <!--header-right-side-div-button-adopt--> */
@@ -393,4 +413,6 @@ nav {
 .right div.adopt ul:hover,
 .right div.adopt i:hover + ul {
   display: block;
+  opacity: 1;
+  visibility: visible;
 }
